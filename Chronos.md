@@ -11,7 +11,9 @@ sudo nmap -sV 10.0.2.19
 Результат: Знайдено 3 відкриті порти:
 
 22/tcp   open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+
 80/tcp   open  http    Apache httpd 2.4.29 ((Ubuntu))
+
 8000/tcp open  http    Node.js Express framework
 
 <img width="1069" height="390" alt="image" src="https://github.com/user-attachments/assets/3079e879-8cc3-4874-a466-35cfc86b9df1" />
