@@ -29,3 +29,9 @@ sudo nmap -sV 10.0.2.19
 
 <img width="1165" height="782" alt="image" src="https://github.com/user-attachments/assets/54fa029b-a6cf-41ad-b03a-f4c5b41ab49f" />
 
+Знахідки на даному етапі:
+- запит на порт 8000 Node.js
+- в параметрі format міститься алфавітно-цифровий рядок 4ugYDuAkScCG5gMcZjEN3mALyG1dD5ZYsiCfWvQ2w9anYGyL
+- заголовок User-Agent містить значення "Chronos"
+
+  
