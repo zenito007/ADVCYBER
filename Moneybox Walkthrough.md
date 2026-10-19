@@ -109,6 +109,15 @@ cat data.txt
 Переходжу в словник rockyou в каталог /usr/share/wordlists/ і відображаю список файлів. Для цього запускаю команду:
 cd /usr/share/wordlists
 
+<img width="1085" height="217" alt="image" src="https://github.com/user-attachments/assets/d3909271-80b1-45f8-a6b0-955655bd6266" />
 
+Крок 10: Підбір пароля для користувача renu
 
+Підбираю пароль використовуючи протокол ssh з допомогою інтсрументу hydra.
+
+hydra -l renu -P /usr/share/wordlists/rockyou.txt -f 10.0.2.21 ssh .
+
+<img width="1306" height="408" alt="image" src="https://github.com/user-attachments/assets/a10f7d7a-8017-4a75-a91a-64eec18a49f1" />
+
+В результаті мені вдається отримати пароль 987654321 користувача renu.
 
