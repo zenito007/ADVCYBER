@@ -83,5 +83,32 @@ dirb http://10.0.2.21
 sudo apt install steghide
 
 В результаті steghide успішно встановлено.
+<img width="1121" height="798" alt="image" src="https://github.com/user-attachments/assets/0bcff8d9-b8e0-4703-97a4-e0688b96e026" />
+
+Далі спробую вилучити приховані дані з файла з допомогою встановленого інструменту steghide та знайденого ключа 3xtr4ctd4t4 в якості пароля.
+
+Запускаю команду steghide extract -sf trytofind.jpg
+<img width="551" height="128" alt="image" src="https://github.com/user-attachments/assets/0d22b787-3b5f-4334-b7cd-19cd1620af42" />
+
+В результаті було виявлено файл data.txt
+
+Переглядаю вміст каталогу з допомогою команди ls
+<img width="1285" height="440" alt="image" src="https://github.com/user-attachments/assets/44c6071b-4907-4c1b-96e7-66d737942d5e" />
+
+Крок 8: Перевірка виявленого файлу
+
+Перевіряю вміст файлу data.txt з допомогою команди:
+
+cat data.txt
+
+<img width="1111" height="213" alt="image" src="https://github.com/user-attachments/assets/4aa5b10e-62f1-4538-bf7a-02839a849228" />
+
+В результаті виявляю повідомлення про вразливий пароль на цільовій машині, який необхідно змінити. Також виявлено користувача renu.  
+
+Крок 9: Встановлення файлу rockyou.
+Переходжу в словник rockyou в каталог /usr/share/wordlists/ і відображаю список файлів. Для цього запускаю команду:
+cd /usr/share/wordlists
+
+
 
 
