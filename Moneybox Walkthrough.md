@@ -28,3 +28,21 @@ sudo netdiscover
 
 ftp 10.0.2.21
 <img width="630" height="410" alt="image" src="https://github.com/user-attachments/assets/4af84fa6-1e89-4239-bd11-18add937fc0c" />
+
+Проникнувши на цільову машину, перевіряю вміст з допомогою команди ls
+
+
+В результаті виявляю файл trytofind.jpg
+
+<img width="880" height="462" alt="image" src="https://github.com/user-attachments/assets/62766b61-1632-4db0-a714-c3e123cf19e5" />
+
+Крок 5: Дослідження виявленого файлу
+
+Завантажую знайдений файл для подальшої перевірки. Для цього використовую команду get:
+
+get trytofind.jpg
+<img width="1608" height="497" alt="image" src="https://github.com/user-attachments/assets/d701a33f-9b8b-4344-b889-c7d2890354f8" />
+
+І виходжу використовуючи команду quit:
+<img width="785" height="174" alt="image" src="https://github.com/user-attachments/assets/3f2eea94-a181-433e-9060-d0b945babf0e" />
+
