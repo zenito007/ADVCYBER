@@ -1,0 +1,23 @@
+Крок 1: Запуск цільових машин у VirtualBox
+<img width="2266" height="1450" alt="image" src="https://github.com/user-attachments/assets/2bae8141-462f-490b-ab96-1245a4670671" />
+
+Крок 2: Знаходження IP-адреси цільової машини:
+
+Для знаходження IP-адреси цільової машини використовую команду:
+
+sudo netdiscover
+
+<img width="1325" height="330" alt="image" src="https://github.com/user-attachments/assets/c969c773-5975-4449-abbf-0de11109802a" />
+
+В результаті знаходжу IP цільової машини.
+
+Крок 3: Сканування відкритих портів
+Використовую інструмент nmap для сканування відкритих портів
+
+<img width="1449" height="1158" alt="image" src="https://github.com/user-attachments/assets/f1baf7db-3775-4525-9878-522fb5976a95" />
+
+В результаті бачу 3 відкритих порти:
+21/tcp open  ftp 
+22/tcp open  ssh
+80/tcp open  http 
+
