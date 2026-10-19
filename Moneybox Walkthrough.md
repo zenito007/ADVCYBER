@@ -46,3 +46,30 @@ get trytofind.jpg
 І виходжу використовуючи команду quit:
 <img width="785" height="174" alt="image" src="https://github.com/user-attachments/assets/3f2eea94-a181-433e-9060-d0b945babf0e" />
 
+В результаті файл успішно завантажено і ми повернулись в калі.
+
+Далі відкриваю завантажений файл у домашній папці калі. 
+<img width="1304" height="1684" alt="image" src="https://github.com/user-attachments/assets/f1bd4f37-87d9-4baf-a927-41c908b73c3f" />
+
+В результаті бачу зображення кішки, яка не містить підказок.
+
+Крок 6: Аналіз веб-додатку на порті 80
+
+Щоб перевірити наступний знайдений порт 80, вводжу в браузері адресу IP цільової машини.
+<img width="802" height="526" alt="image" src="https://github.com/user-attachments/assets/6c197251-50c4-4a7f-93d3-97233c2df5c2" />
+
+В результаті відкривається домашня сторінка MoneyBox http-сервіса цільової машини.
+
+Не знайшовши нічого на веб сторінці спробую перебір каталогів порту 80 використовуючи комінду dirb. 
+
+dirb http://10.0.2.21
+<img width="904" height="768" alt="image" src="https://github.com/user-attachments/assets/da608c60-59ab-4fc9-99bc-84a4c05944c5" />
+
+В результаті знаходжу каталог blogs
+
+Тож продовжу аналіз прихованого каталогу додавши каталого blogs до IP адреси: http://10.0.2.21/blogs
+<img width="762" height="438" alt="image" src="https://github.com/user-attachments/assets/2e37cba9-f516-40f7-8609-21e800299195" />
+
+Далі перевірю вихідний код сторінки клікнувши правою кнопкою мишки і обравши View page source або настиснувши одночасно Ctrl+U
+<img width="1411" height="1461" alt="image" src="https://github.com/user-attachments/assets/035ad106-e65f-4925-a645-3ea7ee41a1db" />
+
