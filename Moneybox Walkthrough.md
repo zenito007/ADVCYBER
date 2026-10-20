@@ -121,3 +121,114 @@ hydra -l renu -P /usr/share/wordlists/rockyou.txt -f 10.0.2.21 ssh .
 
 В результаті мені вдається отримати пароль 987654321 користувача renu.
 
+Крок 11: Дослідження профіля користувача renu
+
+На цьому кроці я можу використати пароль користувача renu щоб проникнути до цільової машини по протоколу ssh. 
+Тож запускаю команду та вводжу пароль 987654321:
+
+ssh renu@10.02.21
+
+<img width="1023" height="542" alt="image" src="https://github.com/user-attachments/assets/901295ad-088c-482b-ba15-24dffe565760" />
+
+В результаті, я увійшов до цільової машини під користувачем renu. 
+
+Перше що мені потрібно це переглянути список файлів в каталогу. Для цього використаю команду ls:
+
+<img width="428" height="109" alt="image" src="https://github.com/user-attachments/assets/832ca0c0-52b1-441b-b772-2f71d72b3b3e" />
+
+В результаті мені вдалось виявити 2 файли.
+
+Перегляну вміст файлу user1.txt. Запускаю команду:
+
+cat user1.txt
+
+<img width="498" height="154" alt="image" src="https://github.com/user-attachments/assets/a396237a-5488-41b0-a7a8-50b57d6af5b7" />
+
+В результаті я виявляю прапорець.
+
+Крок 12: Дослідження інших користувачів системи
+Переходжу в домашній каталог щоб перевірити чи є ще інші користувачі з допомогою команд cd та ls.
+
+cd ..
+ls
+
+<img width="366" height="125" alt="image" src="https://github.com/user-attachments/assets/8e3b7bb8-1dc7-41c2-974c-7d5fa37c40bd" />
+
+В результаті виявляю іншого користувача lily.
+
+Далі переходжу до каталогу lily та переглядаю список файлів включно з прихованими. Виконаємо команди:
+
+cd lily
+ls -la
+
+<img width="718" height="365" alt="image" src="https://github.com/user-attachments/assets/bb5fda43-c8e5-4c96-bfbf-94844cca22cd" />
+
+В результаті виявляю прихований файл user2.txt.
+
+Переглядаю вміст файлу з допомогою команди cat.
+
+cat user2.txt
+
+<img width="639" height="208" alt="image" src="https://github.com/user-attachments/assets/9bc95c3e-c693-4003-8a71-199c99baeba9" />
+
+В результаті виявляю ще один прапорець.
+
+Крок 13: Підвищення привілеїв до root
+
+Переходжу до папки .ssh щоб переглянути список файлів. Для цього виконую команди:
+
+cd .ssh
+ls
+
+<img width="440" height="121" alt="image" src="https://github.com/user-attachments/assets/6ba07ddf-38a1-45ee-8a8b-9d036696cfec" />
+
+В результаті виявляю файл authorized_keys.
+
+Переглядаю вміст файлу з допомогою команди cat.
+<img width="1332" height="213" alt="image" src="https://github.com/user-attachments/assets/02ebce42-e2af-41ac-b378-a386d3d02836" />
+
+В результаті виявляю публічний ключ користувача renu. Тобто користувач renu може залогуватися під користувачем lily.
+
+Спробую проникнути в систему під користувачем lily використовуючи протокол ssh. Запускаю команду:
+
+ssh lily@10.0.2.21
+
+<img width="1115" height="443" alt="image" src="https://github.com/user-attachments/assets/8fe5757d-f519-45f7-b1df-c4729ac26518" />
+
+В результаті мені вдається увійшли в цільову систему використовуючи протокол ssh під користувачем lily не вводивши пароля. 
+
+<img width="1144" height="338" alt="image" src="https://github.com/user-attachments/assets/e7c36464-faa4-46b8-963d-684a25bddf3f" />
+
+Перевіряю привілеї користувача з допомогою команди sudo -l:
+
+<img width="1122" height="303" alt="image" src="https://github.com/user-attachments/assets/ef85312b-f7e5-40b4-853b-871faccaa2cf" />
+
+В результаті виявляю, що користувач lily має права sudo і може виконувати команди perl від імені root не вводивши пароля.
+
+Запускаю команду perl, щоб запустити нову оболонку:
+
+sudo perl -e 'exec "/bin/bash";' .
+
+<img width="1175" height="223" alt="image" src="https://github.com/user-attachments/assets/5c0416ab-3fca-477b-a2d9-5744d183bafb" />
+
+В результаті бачу нову оболонку bash з правами root. Я отримав доступ до всієї системи та можу виконувати будь-які дії. 
+Оскільки ми ввели директиву NOPASSWD, то sudo не потребує введення пароля користувача lily.
+
+Переглядаю список файлів в профілі користувача root. Запускаю команди:
+
+cd ~
+ls -la
+
+<img width="802" height="332" alt="image" src="https://github.com/user-attachments/assets/1dd72b44-dcbc-4294-a14e-2eba33609363" />
+
+В результаті виявляю приховану папку.local та файл .root.txt
+
+Переглядаю вміст файлу .root.txt з допомогою команди
+
+cat .root.txt
+
+<img width="598" height="450" alt="image" src="https://github.com/user-attachments/assets/74a958a0-2d2b-43ac-9420-fac89882ceee" />
+
+В результаті я виявляю фінальний файл з прапорцем.
+
+Фінальний прапорець отримано! CTF завершено!
