@@ -103,4 +103,4 @@ sudo -i
 
 <img width="846" height="749" alt="image" src="https://github.com/user-attachments/assets/ed9c8935-7af8-4fa2-9160-960067b480fd" />
 
-
+Фінальний прапорець знайдено.
