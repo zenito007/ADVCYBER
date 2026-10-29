@@ -63,6 +63,44 @@ zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 В результаті виявляю користувача user.
 
+Оскільки в результаті розархівування ми виявили директорію _king.extracted, переходжу до неї, щоб продовжити дослідження:
+<img width="765" height="1035" alt="image" src="https://github.com/user-attachments/assets/5c4d1e41-316a-4e9f-b2f8-afec549a8122" />
+
+<img width="634" height="280" alt="image" src="https://github.com/user-attachments/assets/8d6f8c72-5aef-4159-8f29-ee1643c4d9b1" />
+
+Перегляну файл user
+
+<img width="485" height="139" alt="image" src="https://github.com/user-attachments/assets/57fa11d2-41af-463e-a3aa-f444bd8cb60d" />
+
+В результаті знаходжу облікові дані: 
+користувач: floki
+пароль:     f@m0usboatbuilde7
+
+Далі по логіці можу спробувати проникнути на цільову машину по ssh протоколу через 22 порт:
+
+<img width="1230" height="742" alt="image" src="https://github.com/user-attachments/assets/838ca110-79f8-41eb-99f2-d16d707587e0" />
+
+В результаті користувач і пароль підходять, тому я всередині.
+
+Переглядаю домашній каталог з допомогою команд ls -la:
+
+<img width="850" height="540" alt="image" src="https://github.com/user-attachments/assets/ddfb1553-839d-458b-a10a-b9052f5eeccd" />
+
+В результаті виявляю файл boat.
+
+Переглядаю файл, щоб знайти підказку:
+
+<img width="505" height="215" alt="image" src="https://github.com/user-attachments/assets/535e70e5-8fa3-4f5f-95bf-333551df052b" />
+
+В результаті виявляю підказку на гіпотезу Коллатца і 29 просте число, яке дорівнює 109.
+
+Виводжу всі числа з числа 109 за допомогою скрипта пайтон. Записую скрипт у редактрі пайтон і зберігаю.
+
+<img width="779" height="425" alt="image" src="https://github.com/user-attachments/assets/7ab79222-82bd-4014-a944-ac139f22757a" />
+
+<img width="1326" height="314" alt="image" src="https://github.com/user-attachments/assets/49daadc1-68ea-4c54-b398-54b3a991dd81" />
+
+Далі перетворюю набір чисел у ASCII символи, для отримання паролю:
 
 
 
