@@ -50,3 +50,20 @@ gobuster dir -r -u http://10.0.2.24/site/ -w /usr/share/dirb/wordlists/common.tx
 zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 <img width="1280" height="402" alt="image" src="https://github.com/user-attachments/assets/bf09a4a7-082a-4698-bbd5-b9b92186b1f9" />
+
+В результаті видобуваю пароль ragnarok123 і знаходжу зображення вікінгів:
+
+<img width="1620" height="1130" alt="image" src="https://github.com/user-attachments/assets/cb8a3f1e-4cd8-40ac-9f9f-52ce88828e2e" />
+
+Логічно провести далі стеганографію з зображенням, щоб отримати приховані дані.
+
+Для цього використаю інструмент binwalk:
+
+<img width="1331" height="305" alt="image" src="https://github.com/user-attachments/assets/937ff816-f6d8-4920-adaf-43c58189060d" />
+
+В результаті виявляю користувача user.
+
+
+
+
+
