@@ -23,5 +23,30 @@ gobuster dir -r -u http://10.0.2.24/site/ -w /usr/share/dirb/wordlists/common.tx
 
 <img width="1317" height="1021" alt="image" src="https://github.com/user-attachments/assets/8bd0c735-1014-405f-a273-54b88db0a659" />
 
+В результаті виявляю прихований файл war.txt, який спробую підставити в адресний рядок адреси у браузері.
 
+<img width="830" height="281" alt="image" src="https://github.com/user-attachments/assets/5d7c5c05-5541-4e9d-b673-e9827e6d690f" />
 
+Ще одна підказка war-is-over знайдена, яку теж можна підставити в адресну стрічку браузера.
+
+<img width="1353" height="785" alt="image" src="https://github.com/user-attachments/assets/557160f4-f310-4830-808e-99b45deecb5b" />
+
+В результаті знаходжу зашифрований файл, який дуже нагадує Base64.
+
+<img width="1065" height="236" alt="image" src="https://github.com/user-attachments/assets/733ea3ea-f219-48c7-8956-ac3a480512db" />
+
+<img width="1324" height="262" alt="image" src="https://github.com/user-attachments/assets/00dacb45-f0d3-475a-8864-a3df2ea6bb7f" />
+
+В результаті виявляю файл king.
+
+<img width="1046" height="744" alt="image" src="https://github.com/user-attachments/assets/ea4a9912-3901-4853-a55f-e888eb9cd490" />
+
+Так виглядає, що файл захищений паролем.
+
+<img width="834" height="887" alt="image" src="https://github.com/user-attachments/assets/74f327c6-9ceb-4698-9e89-6b158c59b868" />
+
+Спробую видобути пароль до файлу з допомогою інструментів zip2john і John the Ripper:
+
+zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
+
+<img width="1280" height="402" alt="image" src="https://github.com/user-attachments/assets/bf09a4a7-082a-4698-bbd5-b9b92186b1f9" />
