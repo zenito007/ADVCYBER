@@ -133,3 +133,18 @@ zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 <img width="718" height="140" alt="image" src="https://github.com/user-attachments/assets/82d0ec5d-1cb0-45dd-bf33-beb46f1a266b" />
 
+Оскільки публічний ключ вже є на цільовій машині, переношу його в домашню директорію користувача ragnar:
+
+<img width="1286" height="694" alt="image" src="https://github.com/user-attachments/assets/4b993f7a-be0a-449f-bf87-dc4d08c94a39" />
+
+Далі пишу скрипт для rpyc на пайтоні в директорії /tmp
+
+<img width="1041" height="1045" alt="image" src="https://github.com/user-attachments/assets/144dde2f-ed0b-4cf3-b073-48fdf10053b5" />
+
+Далі спробую під'єднатись до цільової машини користувача root через ssh з kali:
+
+ssh -i ./ssh_vikings root@10.0.2.24
+
+<img width="1321" height="1122" alt="image" src="https://github.com/user-attachments/assets/2a8eb7a8-05e8-44e2-b214-584a36c533e2" />
+
+
