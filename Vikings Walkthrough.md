@@ -113,6 +113,23 @@ zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 <img width="829" height="174" alt="image" src="https://github.com/user-attachments/assets/8cc61f6e-290b-423c-a0e2-cb6f57b71b57" />
 
+При перевірці каталогу ragnar в директорії home, знаходжу рядок символів у файлі user.txt і пайтонівський файл  rpyc_classic.py.
 
+<img width="1195" height="1030" alt="image" src="https://github.com/user-attachments/assets/8c30f963-e1f1-40b8-a0e7-ef119c256835" />
 
+Оскільки rpyc_classic є найбільш небезпечною бібліотекою RPC, це дозволить мені запускати будь які команди від root.
+
+При підготовці я переношу публічний ключ Kali на цільову машину і змінюю його ім'я у authorized_keys.
+
+Спочатку генерую ключі в Kali з допомогою команди ssh-keygen:
+
+<img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/9f85e988-c0df-4870-bf46-6a10ed406168" />
+
+Далі запускаю apache сервер на kali.
+
+<img width="1320" height="900" alt="image" src="https://github.com/user-attachments/assets/ba00381c-4b2f-4252-9836-a33022b6a746" />
+
+Переношу публічний ключ на вебсервер: sudo cp .ssh/id_ed25519.pub /var/www/html 
+
+<img width="718" height="140" alt="image" src="https://github.com/user-attachments/assets/82d0ec5d-1cb0-45dd-bf33-beb46f1a266b" />
 
