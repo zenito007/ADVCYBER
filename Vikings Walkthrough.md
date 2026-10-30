@@ -100,7 +100,18 @@ zip2john output > hash john hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 <img width="1326" height="314" alt="image" src="https://github.com/user-attachments/assets/49daadc1-68ea-4c54-b398-54b3a991dd81" />
 
-Далі перетворюю набір чисел у ASCII символи, для отримання паролю:
+Далі перетворюю набір чисел у ASCII символи, для отримання паролю з допомогою скрипта пайтон:
+
+<img width="1286" height="667" alt="image" src="https://github.com/user-attachments/assets/e4c89cd5-75b9-4ec3-a62f-7b6d330ae386" />
+
+<img width="741" height="361" alt="image" src="https://github.com/user-attachments/assets/559891d0-0c99-4706-9b27-a482bb7b882b" />
+
+В результаті отримую пароль: mR)|>^/Gky[gz=\.F#j5P(
+Проте ще не відомо якому користувачу радежить цей пароль.
+
+Логічно, спробую перевірити користувача ragnar перейшовши на нього з допомогою команди su ragnar:
+
+<img width="829" height="174" alt="image" src="https://github.com/user-attachments/assets/8cc61f6e-290b-423c-a0e2-cb6f57b71b57" />
 
 
 
