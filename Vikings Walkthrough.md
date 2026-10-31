@@ -147,7 +147,7 @@ ssh -i ./ssh_vikings root@10.0.2.24
 
 <img width="1321" height="1122" alt="image" src="https://github.com/user-attachments/assets/2a8eb7a8-05e8-44e2-b214-584a36c533e2" />
 
-В результаті я отримую доступ root ш можу переглянути вміст домашньої директорії. Виявляю файл root.txt, і переглядаю вміст.
+В результаті я отримую доступ root і можу переглянути вміст домашньої директорії. Виявляю файл root.txt, і переглядаю вміст.
 
 <img width="487" height="83" alt="image" src="https://github.com/user-attachments/assets/645e73cd-38fa-40f4-b6c3-82a5399e0cd8" />
 
