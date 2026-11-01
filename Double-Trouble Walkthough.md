@@ -11,5 +11,18 @@ sudo netdiscover -r 10.0.2.0/24
 
 В результаті виявляю 2 відкритих порти: 80 -веб- і 22 ssh-сервери.
 
-3. 
+3. Розвідка вебсервера.
 
+   Вводжу знайдену адресу пошуковому вікні веббраузера http://10.0.2.4
+
+   <img width="1177" height="948" alt="image" src="https://github.com/user-attachments/assets/4374fd19-8a58-41b8-b5b9-ca1a8639f20e" />
+
+   В результаті виявляю  безкоштовний вебзастосунок qdPM з відкритим кодом для управління проєктами.
+
+   Відстежую приховані директорії з допомогою інтсрументу Gobuster:
+
+   gobuster dir -u http://10.0.2.4/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+
+<img width="1335" height="986" alt="image" src="https://github.com/user-attachments/assets/f049792f-cb9d-40ac-a8bf-ffa4838f3e1e" />
+
+В результаті виявляю приховані директорії, які варто перевірити на підказку.
