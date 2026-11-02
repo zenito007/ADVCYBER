@@ -52,4 +52,8 @@ sudo netdiscover -r 10.0.2.0/24
 otisrush@localhost.com
 otis666
 
+Наявні креди дають мені можливість залогінитись в адмінку панелі керування qdPM.
+
+<img width="1330" height="955" alt="image" src="https://github.com/user-attachments/assets/906df64b-12ac-4128-831e-6aaa349c18f5" />
+
 
