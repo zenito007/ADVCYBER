@@ -42,4 +42,14 @@ sudo netdiscover -r 10.0.2.0/24
 
 <img width="1407" height="346" alt="image" src="https://github.com/user-attachments/assets/6aa0c67c-629d-4f8d-959b-7ffb90fc9904" />
 
-В результаті виявляю парольну фразу "92camaro"
+В результаті виявляю парольну фразу "92camaro" і файл doubletrouble.jpg.out
+
+Перегляну вміст файлу doubletrouble.jpg.out
+
+<img width="1942" height="453" alt="image" src="https://github.com/user-attachments/assets/b21ff076-9683-4f00-9ef1-c226f022fa13" />
+
+У файлі виявляю креди: 
+otisrush@localhost.com
+otis666
+
+
