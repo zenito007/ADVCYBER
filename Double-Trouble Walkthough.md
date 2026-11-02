@@ -33,5 +33,13 @@ sudo netdiscover -r 10.0.2.0/24
 
 <img width="1235" height="957" alt="image" src="https://github.com/user-attachments/assets/7a494ea9-df0e-41db-8bd7-4afee6df640f" />
 
-В результаті виявляю файл у форматі jpg.
+В результаті виявляю файл у форматі jpg, який завантажую локально:
 
+<img width="1308" height="436" alt="image" src="https://github.com/user-attachments/assets/28112e25-206c-4eae-93d1-a3039b8dc608" />
+
+
+Далі викристаю стеганоаналіз з допомогою інструменту stegseek: stegseek ~/Downloads/doubletrouble.jpg /usr/share/wordlists/rockyou.txt
+
+<img width="1407" height="346" alt="image" src="https://github.com/user-attachments/assets/6aa0c67c-629d-4f8d-959b-7ffb90fc9904" />
+
+В результаті виявляю парольну фразу "92camaro"
