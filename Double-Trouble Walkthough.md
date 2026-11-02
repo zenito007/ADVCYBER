@@ -102,4 +102,4 @@ otis666
 
 <img width="1063" height="315" alt="image" src="https://github.com/user-attachments/assets/1d1609ee-a221-4964-b8e6-d72fdc9280d9" />
 
-В результаті виявляю файл doubletrouble.ova, який є образом віриуальної машини.
+В результаті виявляю файл doubletrouble.ova, який є образом віртуальної машини.
