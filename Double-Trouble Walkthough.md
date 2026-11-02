@@ -76,3 +76,30 @@ otis666
 
 <img width="1325" height="1078" alt="image" src="https://github.com/user-attachments/assets/48c5b760-5e5d-4234-9b70-ebb2724c4368" />
 
+Далі завантажую файл expl48146.py в профіль користувача otisrush@localhost.com в адмін панелі.
+
+<img width="2108" height="1056" alt="image" src="https://github.com/user-attachments/assets/c6b60b6f-c35f-46fb-943d-7e8e0ab5e80c" />
+
+<img width="1420" height="429" alt="image" src="https://github.com/user-attachments/assets/e2f8ff3c-0ea5-4cde-b50f-bf87bab9ffbb" />
+
+В результаті, зайшовши на http://10.0.2.4/uploads/users, бачу завантажений файл з експлойтом.
+
+Далі запускаю неткат nc -lvnp 4321 і переглядаю файли в uploads по черзі:
+
+<img width="2539" height="807" alt="image" src="https://github.com/user-attachments/assets/beda24a5-f45b-487b-a65f-74cfaf6a2306" />
+
+В результаті реверс шел спрацьовує і дозволяє мені проникнути в систему.
+
+Оскільки привілеї у мого користувача звичайні, необхідно продовжувати пошук підвищити їх.
+
+Далі виконаю інтерактивну оболонку з допомогою команди sudo awk 'BEGIN { system("/bin/bash") }' із правами root:
+
+<img width="829" height="147" alt="image" src="https://github.com/user-attachments/assets/eeff4302-f296-403d-afd9-501cb699264f" />
+
+В результаті ит отримали привілеї root.
+
+Переходжу в директорію root, щоб переглянути вміст: cd /root
+
+<img width="1063" height="315" alt="image" src="https://github.com/user-attachments/assets/1d1609ee-a221-4964-b8e6-d72fdc9280d9" />
+
+В результаті виявляю файл doubletrouble.ova, який є образом віриуальної машини.
