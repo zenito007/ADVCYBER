@@ -70,11 +70,7 @@ otis666
 
 <img width="1566" height="1334" alt="image" src="https://github.com/user-attachments/assets/5611abb0-5883-4bb6-a20d-2b266c9f1723" />
 
-
-
-<img width="1566" height="1334" alt="image" src="https://github.com/user-attachments/assets/62bd5cd7-9902-4392-9731-ba298ae31f5a" />
-
-
+Модифікую файл реверс шел і експлойт, щоб запустити реверс шел:
 
 <img width="1340" height="1076" alt="image" src="https://github.com/user-attachments/assets/3ee2d732-fc79-44ae-9685-8c4a1bc4bc06" />
 
