@@ -56,4 +56,27 @@ otis666
 
 <img width="1330" height="955" alt="image" src="https://github.com/user-attachments/assets/906df64b-12ac-4128-831e-6aaa349c18f5" />
 
+В результаті мені вдається проникнути всередину панелі керування під користувачем otisrush@localhost.com.
+
+Переглядаю деталі користувача:
+
+<img width="1627" height="1069" alt="image" src="https://github.com/user-attachments/assets/5627b662-8c95-4f2c-a202-f749194b8866" />
+
+Виявляю можливість завантажувати файли.
+
+Далі у мене є можливість завантажити реверс шел для .php (уникаючи верифікацію)використовуючи готове рішення: https://github.com/pentestmonkey/php-reverse-shell
+
+Згідно з виявленою версією qdPM 9.1 знаходжу відповідну експлойт на exploit-DB:
+
+<img width="1566" height="1334" alt="image" src="https://github.com/user-attachments/assets/5611abb0-5883-4bb6-a20d-2b266c9f1723" />
+
+
+
+<img width="1566" height="1334" alt="image" src="https://github.com/user-attachments/assets/62bd5cd7-9902-4392-9731-ba298ae31f5a" />
+
+
+
+<img width="1340" height="1076" alt="image" src="https://github.com/user-attachments/assets/3ee2d732-fc79-44ae-9685-8c4a1bc4bc06" />
+
+<img width="1325" height="1078" alt="image" src="https://github.com/user-attachments/assets/48c5b760-5e5d-4234-9b70-ebb2724c4368" />
 
