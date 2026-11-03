@@ -103,3 +103,31 @@ otis666
 <img width="1063" height="315" alt="image" src="https://github.com/user-attachments/assets/1d1609ee-a221-4964-b8e6-d72fdc9280d9" />
 
 В результаті виявляю файл doubletrouble.ova, який є образом віртуальної машини.
+
+Переношу файл у Shared folder Kali Linux:
+
+<img width="882" height="627" alt="image" src="https://github.com/user-attachments/assets/d3671121-b288-44bd-bae7-23a3a98980fd" />
+
+В результаті ova файл готовий до запуску.
+
+Далі налаштовую правила на Kali, щоб зробити port forwarding для мережі CTF_Network.
+
+<img width="1841" height="1657" alt="image" src="https://github.com/user-attachments/assets/4b1f2dd6-ed74-4610-855c-23c15b28b4ab" />
+
+Запускаю doubletrouble.ova, який у нас зберігся на VM як "inner":
+
+<img width="731" height="597" alt="image" src="https://github.com/user-attachments/assets/2790b7e6-3148-4918-8238-749a007efe82" />
+
+В результаті цільова машина запущена.
+
+Далі проводжу розвідку IP цільової машини:
+
+<img width="1240" height="441" alt="image" src="https://github.com/user-attachments/assets/2ff00f20-8927-4083-90f3-137df5cf49e2" />
+
+В результаті виявляю IP цільової машини: 10.0.2.5
+
+Сканування на відкриті порти: nmap 10.0.2.5 -p- -sV
+
+<img width="1206" height="434" alt="image" src="https://github.com/user-attachments/assets/ca8250e9-beba-4abb-bbe1-256b52be0e49" />
+
+В результаті виявляю 
