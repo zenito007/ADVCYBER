@@ -130,4 +130,19 @@ otis666
 
 <img width="1206" height="434" alt="image" src="https://github.com/user-attachments/assets/ca8250e9-beba-4abb-bbe1-256b52be0e49" />
 
-В результаті виявляю 
+В результаті виявляю 2 відкриті порти: 22 і 80.
+
+Відкрию знайдену веб адресу у браузері:
+
+<img width="1344" height="464" alt="image" src="https://github.com/user-attachments/assets/3c862ba4-fc90-4e9d-9d75-4fb97a82cb5b" />
+
+В результаті виявляю сторінку входу doubletrouble для адмінів.
+
+Дослідження прихованих директорій з допомогою інструменту dirb: dirb http://10.0.2.5
+
+<img width="800" height="695" alt="image" src="https://github.com/user-attachments/assets/a81644ba-4d09-4898-bda2-13417e98e130" />
+
+В результаті ніяких директорій які б нас зацікавили не виявлено.
+
+Підключаю BurpSuit, Запускаємо його і залогінююсь в адмінку:
+
