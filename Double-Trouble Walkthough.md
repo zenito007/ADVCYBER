@@ -1,4 +1,4 @@
-1. Відстеження IP адреси цільової машини:
+<img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/08fd7ece-759b-4341-8df5-3ca69467956c" />1. Відстеження IP адреси цільової машини:
 sudo netdiscover -r 10.0.2.0/24
 
 <img width="1350" height="470" alt="image" src="https://github.com/user-attachments/assets/ddf54851-0f86-4841-8269-a74dc2a7a2fd" />
@@ -232,5 +232,18 @@ ssh clapton@10.0.2.5
 
 В результаті виявляю файл user та прапорець: 6CEA7A737C7C651F6DA7669109B5FB52c
 
+Оскільки я маю привілеї звичайного користувача, мені потрібно їх підвищити використовуючи відому вразливість для ядра знайденого в процесі проникнення на цільову машину.
 
+Для цього вводжу в пошуку браузера: 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 exploit db:
 
+<img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/f249218d-bdb1-4f57-b5d4-bedc8194669c" />
+
+В результаті знаходжу експлойт на сайті exploit-db за посиланням: https://www.exploit-db.com/exploits/40839
+
+Завантажую експлойт на цільову машину з допомогою  команди scp:
+
+scp clapton@10.0.2.5:/home/clapton/exploit.c /home/kali/40839.c
+
+<img width="1256" height="286" alt="image" src="https://github.com/user-attachments/assets/89d55035-61f0-4a89-9736-374da78221f1" />
+
+В результаті експлойт перенесено на цільову машину у файл exploit.c 
