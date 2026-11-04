@@ -215,3 +215,22 @@ sqlmap -r sql -D doubletrouble -T users -C password,username --dump
 
 В результаті виявляю два імені користувачів і їх паролі, які були збережені у відкритому вигляді та доступі в бд.
 
+Оскільки у нас відкритий 22 порт, спробую зайти в адмінку через ssh протокол використовуючи виявлені креди:
+
+Ім’я користувача: clapton
+Пароль: ZubZub99
+
+ssh clapton@10.0.2.5
+
+<img width="1230" height="753" alt="image" src="https://github.com/user-attachments/assets/d8715f70-678e-4d79-9e15-786ac6267b02" />
+
+В результаті мені вдається проникнути на цільову машину.
+
+Перевіряю вміст наявних директорій на підказки або прапорці з допомогою команди ls -la:
+
+<img width="974" height="316" alt="image" src="https://github.com/user-attachments/assets/a4e57aba-50c8-40c8-b7b8-ea2056dcef41" />
+
+В результаті виявляю файл user та прапорець: 6CEA7A737C7C651F6DA7669109B5FB52c
+
+
+
