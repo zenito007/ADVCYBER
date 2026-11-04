@@ -1,4 +1,4 @@
-<img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/08fd7ece-759b-4341-8df5-3ca69467956c" />1. Відстеження IP адреси цільової машини:
+1. Відстеження IP адреси цільової машини:
 sudo netdiscover -r 10.0.2.0/24
 
 <img width="1350" height="470" alt="image" src="https://github.com/user-attachments/assets/ddf54851-0f86-4841-8269-a74dc2a7a2fd" />
@@ -238,6 +238,7 @@ ssh clapton@10.0.2.5
 
 <img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/f249218d-bdb1-4f57-b5d4-bedc8194669c" />
 
+<img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/08fd7ece-759b-4341-8df5-3ca69467956c" />
 В результаті знаходжу експлойт на сайті exploit-db за посиланням: https://www.exploit-db.com/exploits/40839
 
 Завантажую експлойт на цільову машину з допомогою  команди scp:
