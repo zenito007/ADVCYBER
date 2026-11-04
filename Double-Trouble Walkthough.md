@@ -244,6 +244,24 @@ ssh clapton@10.0.2.5
 
 scp clapton@10.0.2.5:/home/clapton/exploit.c /home/kali/40839.c
 
-<img width="1256" height="286" alt="image" src="https://github.com/user-attachments/assets/89d55035-61f0-4a89-9736-374da78221f1" />
+<img width="1305" height="239" alt="image" src="https://github.com/user-attachments/assets/887de635-07d5-454f-9062-ea9d6fe5aa0c" />
 
-В результаті експлойт перенесено на цільову машину у файл exploit.c 
+В результаті експлойт перенесено на цільову машину.
+
+Після завантаження компілюю експлойт з допомогою компілятора gcc:
+
+gcc -pthread exploit.c -o dirty -lcrypt
+
+В результаті було створено два файли: dirty і 40839.c.
+
+Запускаю файл ./dirty
+
+і вводжу пароль firefart
+
+
+<img width="1233" height="857" alt="image" src="https://github.com/user-attachments/assets/c2992b04-44bc-4f17-a209-e268e1115643" />
+
+В результаті при спробі змінити користувача на fireart, мені вдалось змінити користувача і пароль на fireart.
+
+
+
