@@ -261,7 +261,16 @@ gcc -pthread exploit.c -o dirty -lcrypt
 
 <img width="1233" height="857" alt="image" src="https://github.com/user-attachments/assets/c2992b04-44bc-4f17-a209-e268e1115643" />
 
-В результаті при спробі змінити користувача на fireart, мені вдалось змінити користувача і пароль на fireart.
+В результаті при спробі змінити користувача на fireart, мені вдалось змінити користувача і пароль на "fireart".
 
+<img width="715" height="146" alt="image" src="https://github.com/user-attachments/assets/fb59ef9b-36cd-49ea-a131-848c3c0b8dc2" />
 
+Виконавши команду id я підтверджую що я під root:
 
+<img width="672" height="121" alt="image" src="https://github.com/user-attachments/assets/7d1fb436-9606-4b85-b417-ba517f11f6b7" />
+
+Далі переходжу в директорію root і знаходжу фінальний прапорець у виявленому файлі root.txt
+
+<img width="1025" height="457" alt="image" src="https://github.com/user-attachments/assets/1fe9dd53-9ede-4bcc-b129-515bbf95db94" />
+
+Фінальний прапорець знайдено і CTF VM DoubleTrouble пройдено!
