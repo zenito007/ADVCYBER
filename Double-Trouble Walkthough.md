@@ -110,10 +110,6 @@ otis666
 
 В результаті ova файл готовий до запуску.
 
-Далі налаштовую правила на Kali, щоб зробити port forwarding для мережі CTF_Network.
-
-<img width="1841" height="1657" alt="image" src="https://github.com/user-attachments/assets/4b1f2dd6-ed74-4610-855c-23c15b28b4ab" />
-
 Запускаю doubletrouble.ova, який у нас зберігся на VM як "inner":
 
 <img width="731" height="597" alt="image" src="https://github.com/user-attachments/assets/2790b7e6-3148-4918-8238-749a007efe82" />
@@ -144,5 +140,44 @@ otis666
 
 В результаті ніяких директорій які б нас зацікавили не виявлено.
 
-Підключаю BurpSuit, Запускаємо його і залогінююсь в адмінку:
+Підключаю BurpSuit, запускаємо його і залогінююсь в адмінку:
 
+<img width="3001" height="980" alt="image" src="https://github.com/user-attachments/assets/061bfc94-4e94-45fb-9847-9c7a8180aa2b" />
+
+В результаті отримую HTTP POST запит з параметрами:
+POST /index.php HTTP/1.1
+Host: 10.0.2.5
+Content-Length: 26
+Cache-Control: max-age=0
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+Origin: http://10.0.2.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://10.0.2.5/index.php
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+uname=&psw=&btnLogin=Login
+
+Відсутність валідації запитів дає ще одну підставу перевірити на SQL-інʼєкцію.
+
+Насамперед підготую POST запит на Калі:
+
+cat >> sql                         
+POST /index.php HTTP/1.1
+Host: 10.0.2.5
+Content-Length: 26
+Cache-Control: max-age=0
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+Origin: http://10.0.2.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://10.0.2.5/index.php
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+
+uname=&psw=&btnLogin=Login
