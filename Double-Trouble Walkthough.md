@@ -238,7 +238,6 @@ ssh clapton@10.0.2.5
 
 <img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/f249218d-bdb1-4f57-b5d4-bedc8194669c" />
 
-<img width="2960" height="853" alt="image" src="https://github.com/user-attachments/assets/08fd7ece-759b-4341-8df5-3ca69467956c" />
 В результаті знаходжу експлойт на сайті exploit-db за посиланням: https://www.exploit-db.com/exploits/40839
 
 Завантажую експлойт на цільову машину з допомогою  команди scp:
